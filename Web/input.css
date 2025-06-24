@@ -1,3 +1,51 @@
 ﻿@import "tailwindcss";
 @import "./Styles/theme.css";
 @import "./Styles/components.css";
+
+@layer components {
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        transition: background-color 200ms ease-in-out;
+        cursor: pointer;
+    }
+
+    .btn-primary {
+        background-color: var(--color-emerald-600);
+        color: var(--color-white);
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--color-emerald-600);
+
+        &:hover {
+            background-color: var(--color-emerald-700);
+            border-color: var(--color-emerald-700);
+        }
+
+        &:active {
+            background-color: var(--color-emerald-800);
+            border-color: var(--color-emerald-800);
+        }
+    }
+    
+    .btn-secondary {
+        background-color: var(--color-white);
+        color: var(--color-neutral-900);
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--color-neutral-300);
+        
+        &:hover {
+            background-color: var(--color-neutral-100);
+        }
+        
+        &:active {
+            background-color: var(--color-neutral-200);
+        }
+    }
+    
+    .btn-md {
+        @apply text-sm px-3 h-8;
+        min-width: 96px;
+    }
+}

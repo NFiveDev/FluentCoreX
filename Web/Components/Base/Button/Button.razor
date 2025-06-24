@@ -14,17 +14,18 @@
 
     private string VariantCssStr => Variant switch
     {
-        ButtonVariant.Secondary => "bg-white text-neutral-900",
+        ButtonVariant.Primary => "btn-primary",
+        ButtonVariant.Secondary => "btn-secondary",
         _ => ""
     };
     
     private string SizeCssStr => Size switch
     {
-        ButtonSize.Medium => "text-sm px-2 h-8",
+        ButtonSize.Medium => "btn-md",
         _ => ""
     };
 
-    private string _baseCssStr = "inline-flex items-center justify-center";
+    private string _baseCssStr = "btn";
 
     private string CssClass => string.Join(" ", _baseCssStr, VariantCssStr, SizeCssStr);
 }
