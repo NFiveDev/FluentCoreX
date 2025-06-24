@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentCoreX", "FluentCoreX\FluentCoreX.csproj", "{74B98D83-8DFE-4EE7-9A14-DDFEB9E42938}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{74B98D83-8DFE-4EE7-9A14-DDFEB9E42938}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{5CB41AD4-A034-44BE-9DC4-64B1F15269A6}"
 	ProjectSection(SolutionItems) = preProject

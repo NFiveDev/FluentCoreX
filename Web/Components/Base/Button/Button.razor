@@ -1,0 +1,30 @@
+﻿
+
+<button class="@CssClass">@ChildContent</button>
+
+@code {
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter] 
+    public ButtonVariant Variant { get; set; } = ButtonVariant.Secondary;
+
+    [Parameter] 
+    public ButtonSize Size { get; set; } = ButtonSize.Medium;
+
+    private string VariantCssStr => Variant switch
+    {
+        ButtonVariant.Secondary => "bg-white text-neutral-900",
+        _ => ""
+    };
+    
+    private string SizeCssStr => Size switch
+    {
+        ButtonSize.Medium => "text-sm px-2 h-8",
+        _ => ""
+    };
+
+    private string _baseCssStr = "inline-flex items-center justify-center";
+
+    private string CssClass => string.Join(" ", _baseCssStr, VariantCssStr, SizeCssStr);
+}
