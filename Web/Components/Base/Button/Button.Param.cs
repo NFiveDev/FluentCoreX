@@ -5,7 +5,7 @@ public enum ButtonVariant
     Primary,
     Secondary,
     Outline,
-    Icon
+    Sublte
 }
 
 public enum ButtonSize
@@ -13,4 +13,5 @@ public enum ButtonSize
     Small,
     Medium,
     Large,
+    Icon,
 }

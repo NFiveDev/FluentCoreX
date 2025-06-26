@@ -17,7 +17,7 @@
         ButtonVariant.Primary => "btn-primary",
         ButtonVariant.Secondary => "btn-secondary", 
         ButtonVariant.Outline => "btn-outline",
-        ButtonVariant.Icon => "btn-icon",
+        ButtonVariant.Sublte => "btn-subtle",
         _ => ""
     };
     
@@ -27,7 +27,5 @@
         _ => ""
     };
 
-    private string _baseCssStr = "btn";
-
-    private string CssClass => string.Join(" ", _baseCssStr, VariantCssStr, SizeCssStr);
+    private string CssClass => string.Join(" ", "btn", VariantCssStr, SizeCssStr);
 }
