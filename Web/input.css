@@ -44,8 +44,29 @@
         }
     }
     
+    .btn-outline {
+        background-color: var(--color-white);
+        color: var(--color-neutral-900);
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--color-neutral-300);
+    }
+    
+    .btn-icon {
+        
+    }
+    
+    .btn-sm {
+        @apply text-xs px-2 h-8;
+        min-width: 64px;
+    }
+    
     .btn-md {
         @apply text-sm px-3 h-8;
+        min-width: 96px;
+    }
+    
+    .btn-lg {
+        @apply text-sm px-5 h-10;
         min-width: 96px;
     }
 }

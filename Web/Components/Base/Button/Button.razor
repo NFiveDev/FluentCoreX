@@ -15,7 +15,9 @@
     private string VariantCssStr => Variant switch
     {
         ButtonVariant.Primary => "btn-primary",
-        ButtonVariant.Secondary => "btn-secondary",
+        ButtonVariant.Secondary => "btn-secondary", 
+        ButtonVariant.Outline => "btn-outline",
+        ButtonVariant.Icon => "btn-icon",
         _ => ""
     };
     

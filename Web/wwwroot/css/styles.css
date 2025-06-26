@@ -1,4 +1,5 @@
 /*! tailwindcss v4.1.10 | MIT License | https://tailwindcss.com */
+@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -12,12 +13,17 @@
     --color-neutral-100: oklch(97% 0 0);
     --color-neutral-200: oklch(92.2% 0 0);
     --color-neutral-300: oklch(87% 0 0);
+    --color-neutral-700: oklch(37.1% 0 0);
     --color-neutral-900: oklch(20.5% 0 0);
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
+    --font-weight-bold: 700;
     --radius-sm: 0.25rem;
+    --radius-md: 0.375rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -171,11 +177,54 @@
   .m-12 {
     margin: calc(var(--spacing) * 12);
   }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
   .flex {
     display: flex;
   }
+  .size-6 {
+    width: calc(var(--spacing) * 6);
+    height: calc(var(--spacing) * 6);
+  }
+  .flex-col {
+    flex-direction: column;
+  }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
+  }
+  .gap-x-3 {
+    column-gap: calc(var(--spacing) * 3);
+  }
+  .gap-y-3 {
+    row-gap: calc(var(--spacing) * 3);
+  }
+  .rounded-md {
+    border-radius: var(--radius-md);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-neutral-200 {
+    border-color: var(--color-neutral-200);
+  }
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
+  .py-5 {
+    padding-block: calc(var(--spacing) * 5);
+  }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .text-neutral-700 {
+    color: var(--color-neutral-700);
   }
 }
 @layer components;
@@ -214,11 +263,48 @@
       background-color: var(--color-neutral-200);
     }
   }
+  .btn-outline {
+    background-color: var(--color-white);
+    color: var(--color-neutral-900);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-neutral-300);
+  }
+  .btn-sm {
+    height: calc(var(--spacing) * 8);
+    padding-inline: calc(var(--spacing) * 2);
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+    min-width: 64px;
+  }
   .btn-md {
     height: calc(var(--spacing) * 8);
     padding-inline: calc(var(--spacing) * 3);
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
     min-width: 96px;
+  }
+  .btn-lg {
+    height: calc(var(--spacing) * 10);
+    padding-inline: calc(var(--spacing) * 5);
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+    min-width: 96px;
+  }
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
+      --tw-font-weight: initial;
+    }
   }
 }
